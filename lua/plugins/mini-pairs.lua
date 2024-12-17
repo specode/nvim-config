@@ -1,9 +1,9 @@
 return {
     {
-        'nvim-lualine/lualine.nvim',
+        'echasnovski/mini.pairs',
         version = "*",
         config = function()
-            require('lualine').setup()
+            require('mini.pairs').setup()
         end
     }
 }
