@@ -11,7 +11,7 @@ return {
 			"saadparwaiz1/cmp_luasnip", -- LuaSnip 补全源
 		},
 		config = function()
-            require("config.cmp") -- 添加此行，引用 cmp 的配置文件
-        end,
+			require("config.cmp") -- 添加此行，引用 cmp 的配置文件
+		end,
 	},
 }

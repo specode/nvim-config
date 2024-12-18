@@ -8,8 +8,8 @@ return {
 	},
 	{
 		"williamboman/mason.nvim",
-        version = "*",
-        config = function()
+		version = "*",
+		config = function()
 			require("mason").setup({
 				ui = {
 					icons = {
@@ -18,16 +18,17 @@ return {
 						package_uninstalled = "✗"
 					}
 				}
-			}) 
-        end,
+			})
+		end,
 	},
-    {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "gopls", "phpactor" }, -- 按需增加语言
-            })
-        end,
-    },
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls", "pyright", "gopls", "phpactor" }, -- 按需增加语言
+				automatic_installation = true,
+			})
+		end,
+	},
 }
