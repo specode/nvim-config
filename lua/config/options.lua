@@ -9,6 +9,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 
+-- 显示行号
+vim.opt.number = true
+
 -- 剪切板共享
 vim.opt.clipboard = 'unnamedplus'
 
