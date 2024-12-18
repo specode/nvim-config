@@ -1,5 +1,5 @@
 -- 设置 leader 键为 ','
-vim.g.mapleader = ',' 
+vim.g.mapleader = ','
 
 -- Y 当前位置复制整行
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
