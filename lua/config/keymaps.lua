@@ -21,4 +21,12 @@ vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><Left>', { noremap = true, silent = 
 vim.keymap.set("n", "gb", ":b#<CR>", { noremap = true, silent = true })
 
 -- nvim-tree 配置
+-- 打开 nvim-tree
 vim.api.nvim_set_keymap('n', '<C-e>', ':lua require("nvim-tree.api").tree.toggle()<CR>', { noremap = true, silent = true })
+-- <leader>nf 定位到文件
+vim.api.nvim_set_keymap(
+  'n', -- normal 模式
+  '<leader>nf', -- 快捷键
+  ':NvimTreeFindFile<CR>', -- 执行的命令
+  { noremap = true, silent = true } -- 无递归映射，静默执行
+)

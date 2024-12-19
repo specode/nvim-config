@@ -11,7 +11,7 @@ return {
 		},
 		config = function()
 			require("config.cmp") -- 引用 cmp 的配置文件
-			require("config.snippets") -- 引用 snip 的配置文件
+			require("luasnip.loaders.from_vscode").lazy_load() -- 自动加载 VSCode 风格的片段
 		end,
 	},
 }
