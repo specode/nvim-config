@@ -25,8 +25,9 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
 		config = function()
+			local lang_config = require("config.lang")
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "gopls", "phpactor" }, -- 按需增加语言
+				ensure_installed = lang_config.lsp_servers,
 				automatic_installation = true,
 			})
 		end,
