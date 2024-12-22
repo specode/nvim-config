@@ -30,6 +30,7 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	sources = cmp.config.sources({
+		{ name = "copilot" }, -- Copilot 源
 		{ name = "nvim_lsp" }, -- LSP 源
 		{ name = "luasnip" }, -- 代码片段源
 	}, {

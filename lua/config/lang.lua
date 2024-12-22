@@ -6,6 +6,7 @@ local M = {}
 M.lsp_servers = { "lua_ls", "pyright", "gopls", "phpactor" }
 
 -- https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages
-M.treesitter_parsers = { "go", "php", "lua", "python", "javascript", "typescript", "html", "css" }
+-- M.treesitter_parsers = { "go", "php", "lua", "python", "javascript", "typescript", "html", "css" }
+M.treesitter_parsers = "all"
 
 return M
