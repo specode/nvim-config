@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><Right>', { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><Left>', { noremap = true, silent = true })  -- Ctrl+h -> <C-w><Left>
 
 -- 跳回
-vim.keymap.set("n", "gb", ":b#<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "gb", "<C-o>", { noremap = true, silent = true })
 
 -- nvim-tree 配置
 -- 打开 nvim-tree
