@@ -8,7 +8,7 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-Space>"] = cmp.mapping.complete(), -- 手动触发补全
+		["<C-Space>"] = cmp.mapping.complete(),      -- 手动触发补全
 		["<CR>"] = cmp.mapping.confirm({ select = true }), -- 确认补全项
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -16,7 +16,7 @@ cmp.setup({
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump() -- 跳转到下一个片段
 			else
-				fallback() -- 默认行为
+				fallback()   -- 默认行为
 			end
 		end, { "i", "s" }),
 		["<S-Tab>"] = cmp.mapping(function(fallback)

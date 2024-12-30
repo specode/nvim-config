@@ -26,8 +26,8 @@ return {
 			},
 		},
 		config = function()
-			require("copilot_cmp").setup() -- Copilot 补全源支持
-			require("config.cmp") -- 引用 cmp 的配置文件
+			require("copilot_cmp").setup()            -- Copilot 补全源支持
+			require("config.cmp")                     -- 引用 cmp 的配置文件
 			require("luasnip.loaders.from_vscode").lazy_load() -- 自动加载 VSCode 风格的片段
 		end,
 	},

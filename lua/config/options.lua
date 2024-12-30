@@ -18,4 +18,3 @@ vim.opt.clipboard = 'unnamedplus'
 -- 禁用 netrw 插件
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
