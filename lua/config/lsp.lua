@@ -40,10 +40,11 @@ mason_lspconfig.setup_handlers({
 			capabilities = capabilities,
 			settings = {
 				Lua = {
-					runtime = { version = "LuaJIT" },
-					diagnostics = { globals = { "vim" } },
+					runtime = { version = "LuaJIT", path = vim.split(package.path, ';') },
+					diagnostics = { globals = { "vim" }, disable = { 'inconsistent-type-checking' } },
 					workspace = {
-						library = vim.api.nvim_get_runtime_file("", true),
+						-- library = vim.api.nvim_get_runtime_file("", true),
+						library = { [vim.fn.expand("$VIMRUNTIME/lua")] = true },
 						checkThirdParty = false,
 					},
 				},
