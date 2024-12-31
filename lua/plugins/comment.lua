@@ -2,28 +2,8 @@ return {
 	{
 		'numToStr/Comment.nvim',
 		version = "*",
-		opts = {
-			---LHS of toggle mappings in NORMAL mode
-			toggler = {
-				---Line-comment toggle keymap
-				line = '//',
-				---Block-comment toggle keymap
-				block = '/b',
-
-			},
-			---LHS of operator-pending mappings in NORMAL and VISUAL mode
-			opleader = {
-				---Line-comment keymap
-				line = '//',
-				---Block-comment keymap
-				block = '/b',
-			},
-			mappings = {
-				---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
-				basic = true,
-				---Extra mapping; `gco`, `gcO`, `gcA`
-				extra = false,
-			},
-		}
+		config = function()
+			require("config.comment").setup()
+		end
 	}
 }
