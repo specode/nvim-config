@@ -2,7 +2,7 @@ local M = {}
 
 M.setup = function()
 	require("nvim-tree").setup({
-		on_attach = function()
+		on_attach = function(bufnr)
 			local api = require("nvim-tree.api")
 
 			-- 自定义快捷键
