@@ -12,7 +12,7 @@
 4. 通过 `:Mason` 安装 `lsp-server`
 5. 安装 ripgrep 用于全局搜索：`brew install ripgrep`
 6. （可选）启用 Copilot `:Copilot auth`
-7. （可选）启用 Avante `lua/config/avante.lua` 修改其 `provider` 相关配置，并再环境变量中更新 API Key
+7. （可选）启用 Avante `lua/config/avante.lua` 修改其 `provider` 相关配置，并再环境变量中更新 API Key， `export OPENAI_API_KEY=xxx`
 
 ## 快捷键说明
 
