@@ -12,7 +12,8 @@ return {
 	-- openrouter
 	openai = {
 		endpoint = "https://openrouter.ai/api/v1",
-		model = "deepseek/deepseek-chat",
+		-- model = "deepseek/deepseek-chat",
+		model = "google/gemini-2.0-flash-001",
 		timeout = 30000, -- 超时时间，单位为毫秒
 		temperature = 0,
 		max_tokens = 4096,
