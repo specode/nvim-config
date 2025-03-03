@@ -16,4 +16,4 @@
 
 ## 快捷键说明
 
-TODO
+见 `lua/config/keymaps.lua`
