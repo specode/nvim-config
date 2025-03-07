@@ -1,105 +1,105 @@
 # nvim-config
 
-这是我的 Neovim 配置，使用 Lazy 用于插件管理
+This is my Neovim configuration, using Lazy for plugin management
 
-* 使用环境是 MacOS + iTerm2 
+* Environment: MacOS + iTerm2
 
-## 初始化流程
+## Initialization Process
 
-1. 安装 Nerd 字体，推荐 `JetBrainsMonoNerdFontMono-Regular`，下载安装后，终端字体切换
-2. 下载项目，并建立软链接到 `/Users/{your user}/.config/nvim/` 
-3. 打开 nvim 配置目录下的 `lua/config/lang.lua` 配置开发语言
-4. 通过 `:Mason` 安装 `lsp-server`
-5. 安装 ripgrep 用于全局搜索：`brew install ripgrep`
-6. （可选）启用 Copilot `:Copilot auth`
-7. （可选）启用 Avante `lua/config/avante.lua` 修改其 `provider` 相关配置，并再环境变量中更新 API Key， `export OPENAI_API_KEY=xxx`
+1. Install Nerd Font, recommended `JetBrainsMonoNerdFontMono-Regular`, after downloading and installation, switch terminal font
+2. Clone the project and create a symlink to `/Users/{your user}/.config/nvim/`
+3. Open `lua/config/lang.lua` in nvim config directory to configure development languages
+4. Install `lsp-server` via `:Mason`
+5. Install ripgrep for global search: `brew install ripgrep`
+6. (Optional) Enable Copilot `:Copilot auth`
+7. (Optional) Enable Avante by modifying `provider` configuration in `lua/config/avante.lua`, and update API Key in environment variables: `export OPENAI_API_KEY=xxx`
 
-## 快捷键说明
+## Keybindings Reference
 
-### 基础操作
-| 快捷键 | 功能 |
+### Basic Operations
+| Keybinding | Function |
 | --- | --- |
-| `,` | Leader 键 |
-| `Y` | 从当前位置复制到行尾 |
-| `gb` | 跳回上一个位置 (`<C-o>`) |
+| `,` | Leader key |
+| `Y` | Yank from current position to end of line |
+| `gb` | Go back to previous position (`<C-o>`) |
 
-### 窗口与标签页
-| 快捷键 | 功能 |
+### Window & Tab Management
+| Keybinding | Function |
 | --- | --- |
-| `<C-t>` | 打开新标签页 |
-| `<S-H>` | 切换到上一个标签页 |
-| `<S-L>` | 切换到下一个标签页 |
-| `<C-h>` | 切换到左侧窗口 |
-| `<C-j>` | 切换到下方窗口 |
-| `<C-k>` | 切换到上方窗口 |
-| `<C-l>` | 切换到右侧窗口 |
+| `<C-t>` | Open new tab |
+| `<S-H>` | Switch to previous tab |
+| `<S-L>` | Switch to next tab |
+| `<C-h>` | Switch to left window |
+| `<C-j>` | Switch to bottom window |
+| `<C-k>` | Switch to top window |
+| `<C-l>` | Switch to right window |
 
-### 文件浏览 (nvim-tree)
-| 快捷键 | 功能 |
+### File Explorer (nvim-tree)
+| Keybinding | Function |
 | --- | --- |
-| `<C-e>` | 切换文件树 |
-| `,nf` | 在文件树中定位当前文件 |
-| `<CR>` | 打开文件/目录 |
-| `h` | 关闭目录 |
-| `v` | 垂直分割打开文件 |
-| `a` | 创建文件/目录 |
-| `d` | 删除文件/目录 |
-| `r` | 重命名文件/目录 |
-| `x` | 剪切文件/目录 |
-| `c` | 复制文件/目录 |
-| `p` | 粘贴文件/目录 |
-| `R` | 刷新文件树 |
-| `?` | 显示帮助 |
+| `<C-e>` | Toggle file tree |
+| `,nf` | Locate current file in file tree |
+| `<CR>` | Open file/directory |
+| `h` | Close directory |
+| `v` | Open file in vertical split |
+| `a` | Create file/directory |
+| `d` | Delete file/directory |
+| `r` | Rename file/directory |
+| `x` | Cut file/directory |
+| `c` | Copy file/directory |
+| `p` | Paste file/directory |
+| `R` | Refresh file tree |
+| `?` | Show help |
 
-### 搜索 (Telescope)
-| 快捷键 | 功能 |
+### Search (Telescope)
+| Keybinding | Function |
 | --- | --- |
-| `<C-p>` | 查找文件 |
-| `<C-g>` | 全局搜索文本 |
-| `,fb` | 查找缓冲区 |
-| `,fh` | 查找帮助标签 |
+| `<C-p>` | Find files |
+| `<C-g>` | Global text search |
+| `,fb` | Find buffer |
+| `,fh` | Find help tags |
 
-### 代码导航 (LSP)
-| 快捷键 | 功能 |
+### Code Navigation (LSP)
+| Keybinding | Function |
 | --- | --- |
-| `gd` | 跳转到定义 |
-| `,dt` | 在新标签页中打开定义 |
-| `,dv` | 在垂直分割窗口中打开定义 |
-| `gr` | 查找引用 |
-| `gi` | 查找实现 |
-| `K` | 显示悬浮文档 |
-| `,rn` | 重命名符号 |
-| `,ca` | 代码操作 |
-| `[d` | 跳转到上一个诊断 |
-| `]d` | 跳转到下一个诊断 |
-| `,f` | 格式化代码 |
+| `gd` | Go to definition |
+| `,dt` | Open definition in new tab |
+| `,dv` | Open definition in vertical split |
+| `gr` | Find references |
+| `gi` | Find implementations |
+| `K` | Show hover documentation |
+| `,rn` | Rename symbol |
+| `,ca` | Code actions |
+| `[d` | Go to previous diagnostic |
+| `]d` | Go to next diagnostic |
+| `,f` | Format code |
 
-### 代码注释 (Comment)
-| 快捷键 | 功能 |
+### Code Commenting (Comment)
+| Keybinding | Function |
 | --- | --- |
-| `//` | 切换行注释 |
-| `/b` | 切换块注释 |
+| `//` | Toggle line comment |
+| `/b` | Toggle block comment |
 
-### Git 操作 (Gitsigns)
-| 快捷键 | 功能 |
+### Git Operations (Gitsigns)
+| Keybinding | Function |
 | --- | --- |
-| `]c` | 跳转到下一个 hunk |
-| `[c` | 跳转到上一个 hunk |
-| `,hs` | 暂存当前 hunk |
-| `,hr` | 重置当前 hunk |
-| `,hS` | 暂存整个缓冲区 |
-| `,hu` | 撤销暂存当前 hunk |
-| `,hR` | 重置整个缓冲区 |
-| `,hp` | 预览当前 hunk |
-| `,hb` | 显示当前行的 blame 信息 |
-| `,tb` | 切换当前行的 blame 信息 |
-| `,hd` | 显示当前文件的 diff |
-| `,td` | 切换显示已删除的行 |
+| `]c` | Go to next hunk |
+| `[c` | Go to previous hunk |
+| `,hs` | Stage current hunk |
+| `,hr` | Reset current hunk |
+| `,hS` | Stage entire buffer |
+| `,hu` | Undo stage current hunk |
+| `,hR` | Reset entire buffer |
+| `,hp` | Preview current hunk |
+| `,hb` | Show blame info for current line |
+| `,tb` | Toggle blame info for current line |
+| `,hd` | Show diff for current file |
+| `,td` | Toggle deleted lines |
 
-### 代码补全
-| 快捷键 | 功能 |
+### Code Completion
+| Keybinding | Function |
 | --- | --- |
-| `<C-Space>` | 手动触发补全 |
-| `<CR>` | 确认补全项 |
-| `<Tab>` | 选择下一个补全项 |
-| `<S-Tab>` | 选择上一个补全项 |
+| `<C-Space>` | Manual trigger completion |
+| `<CR>` | Confirm completion item |
+| `<Tab>` | Select next completion item |
+| `<S-Tab>` | Select previous completion item |
