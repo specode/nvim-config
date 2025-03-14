@@ -1,3 +1,5 @@
+[简体中文](README_CN.md)
+
 # nvim-config
 
 This is my Neovim configuration, using Lazy for plugin management
