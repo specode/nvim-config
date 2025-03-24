@@ -26,7 +26,7 @@ return {
 						return require("codecompanion.adapters").extend("openai_compatible", {
 							schema = {
 								model = {
-									default = "doubao-1-5-pro-256k-250115",
+									default = "deepseek-v3-241226",
 								},
 							},
 							env = {
