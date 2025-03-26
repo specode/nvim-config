@@ -6,7 +6,7 @@ return {
 			__inherited_from = 'openai',
 			endpoint = 'https://ark.cn-beijing.volces.com/api/v3',
 			api_key_name = 'ARK_API_KEY',
-			model = 'deepseek-v3-241226',
+			model = 'deepseek-v3-250324',
 			max_completion_tokens = 12288,
 		},
 		volcengine_deepseek_r1 = {
