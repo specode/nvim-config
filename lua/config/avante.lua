@@ -1,6 +1,6 @@
 -- detail: https://github.com/yetone/avante.nvim/wiki/Custom-providers
 return {
-	provider = 'volcengine_deepseek_v3',
+	provider = 'volcengine_deepseek_r1',
 	vendors = {
 		volcengine_deepseek_v3 = {
 			__inherited_from = 'openai',

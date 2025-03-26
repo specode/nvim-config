@@ -10,9 +10,8 @@ return {
 			"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
-			"hrsh7th/nvim-cmp",   -- 自动补全支持
 			"nvim-tree/nvim-web-devicons", -- 图标支持
-			"zbirenbaum/copilot.lua", -- Copilot 提供者支持
+			"hrsh7th/nvim-cmp",   -- 自动补全支持
 			{
 				-- 图片粘贴功能支持
 				"HakonHarnes/img-clip.nvim",
