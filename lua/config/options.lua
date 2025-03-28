@@ -1,6 +1,9 @@
 -- 终端颜色配置
 vim.opt.termguicolors = true
 
+-- 状态栏
+vim.opt.laststatus = 3
+
 -- 缩进配置
 vim.opt.smarttab = true
 vim.opt.smartindent = true
