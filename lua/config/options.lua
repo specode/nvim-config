@@ -4,6 +4,9 @@ vim.opt.termguicolors = true
 -- 状态栏
 vim.opt.laststatus = 3
 
+-- 提示末尾空格
+vim.opt.list = true
+
 -- 缩进配置
 vim.opt.smarttab = true
 vim.opt.smartindent = true
