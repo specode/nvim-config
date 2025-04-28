@@ -17,6 +17,13 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w><Down>', { noremap = true, silent = 
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><Right>', { noremap = true, silent = true }) -- Ctrl+l -> <C-w><Right>
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><Left>', { noremap = true, silent = true })  -- Ctrl+h -> <C-w><Left>
 
+-- 显示诊断
+vim.keymap.set('n', '<leader>e', function()
+	vim.diagnostic.open_float(nil, {
+		focusable = false,
+	})
+end, { desc = 'Open diagnostic float' })
+
 -- 跳回
 vim.keymap.set("n", "gb", "<C-o>", { noremap = true, silent = true })
 
@@ -50,6 +57,10 @@ end, { noremap = true, silent = true, desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fh", function()
 	require("telescope.builtin").help_tags()
 end, { noremap = true, silent = true, desc = "Find Help" })
+
+vim.keymap.set("n", "<leader>fd", function()
+	require("telescope.builtin").diagnostics()
+end, { noremap = true, silent = true, desc = "Find Diagnostics" })
 
 -- gitsigns 配置
 vim.api.nvim_set_keymap('n', ']c', ':Gitsigns next_hunk<CR>', { noremap = true, silent = true })                         -- 跳转到下一个 hunk
