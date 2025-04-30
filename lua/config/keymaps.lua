@@ -1,21 +1,21 @@
 -- 设置 leader 键为 ','
 vim.g.mapleader = ','
 
--- Y 当前位置复制整行
-vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true, silent = true })
+-- 复制到行尾
+vim.keymap.set('n', 'Y', 'y$', { desc = 'Copy to end of line', remap = false, silent = true })
 
--- ctrl + t 打开新窗口
-vim.api.nvim_set_keymap('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
+-- 新标签页
+vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { desc = 'New tab', remap = false, silent = true })
 
--- 通过 Shift + H/L 在标签页之间切换
-vim.api.nvim_set_keymap('n', '<S-H>', 'gT', { noremap = true, silent = true }) -- Shift+H -> gT
-vim.api.nvim_set_keymap('n', '<S-L>', 'gt', { noremap = true, silent = true }) -- Shift+L -> gt
+-- 标签页导航 (Shift+H/L)
+vim.keymap.set('n', '<S-H>', 'gT', { desc = 'Previous tab', remap = false, silent = true })
+vim.keymap.set('n', '<S-L>', 'gt', { desc = 'Next tab', remap = false, silent = true })
 
--- 窗口导航
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w><Up>', { noremap = true, silent = true })    -- Ctrl+k -> <C-w><Up>
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w><Down>', { noremap = true, silent = true })  -- Ctrl+j -> <C-w><Down>
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w><Right>', { noremap = true, silent = true }) -- Ctrl+l -> <C-w><Right>
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><Left>', { noremap = true, silent = true })  -- Ctrl+h -> <C-w><Left>
+-- 窗口导航 (Ctrl+hjkl)
+vim.keymap.set('n', '<C-h>', '<C-w><Left>',  { desc = 'Focus left window', remap = false, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w><Down>',  { desc = 'Focus down window', remap = false, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w><Up>',    { desc = 'Focus up window', remap = false, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w><Right>', { desc = 'Focus right window', remap = false, silent = true })
 
 -- 显示诊断
 vim.keymap.set('n', '<leader>e', function()
@@ -63,15 +63,27 @@ vim.keymap.set("n", "<leader>fd", function()
 end, { noremap = true, silent = true, desc = "Find Diagnostics" })
 
 -- gitsigns 配置
-vim.api.nvim_set_keymap('n', ']c', ':Gitsigns next_hunk<CR>', { noremap = true, silent = true })                         -- 跳转到下一个 hunk
-vim.api.nvim_set_keymap('n', '[c', ':Gitsigns prev_hunk<CR>', { noremap = true, silent = true })                         -- 跳转到上一个 hunk
-vim.api.nvim_set_keymap('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', { noremap = true, silent = true })                -- 暂存当前 hunk
-vim.api.nvim_set_keymap('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = true })                -- 重置当前 hunk
-vim.api.nvim_set_keymap('n', '<leader>hS', ':Gitsigns stage_buffer<CR>', { noremap = true, silent = true })              -- 暂存整个缓冲区
-vim.api.nvim_set_keymap('n', '<leader>hu', ':Gitsigns undo_stage_hunk<CR>', { noremap = true, silent = true })           -- 撤销暂存当前 hunk
-vim.api.nvim_set_keymap('n', '<leader>hR', ':Gitsigns reset_buffer<CR>', { noremap = true, silent = true })              -- 重置整个缓冲区
-vim.api.nvim_set_keymap('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { noremap = true, silent = true })              -- 预览当前 hunk
-vim.api.nvim_set_keymap('n', '<leader>hb', ':Gitsigns blame_line<CR>', { noremap = true, silent = true })                -- 显示当前行的 blame 信息
-vim.api.nvim_set_keymap('n', '<leader>tb', ':Gitsigns toggle_current_line_blame<CR>', { noremap = true, silent = true }) -- 切换当前行的 blame 信息
-vim.api.nvim_set_keymap('n', '<leader>hd', ':Gitsigns diffthis<CR>', { noremap = true, silent = true })                  -- 显示当前文件的 diff
-vim.api.nvim_set_keymap('n', '<leader>td', ':Gitsigns toggle_deleted<CR>', { noremap = true, silent = true })            -- 切换显示已删除的行
+vim.keymap.set('n', ']c', ':Gitsigns next_hunk<CR>', { noremap = true, silent = true, desc = 'Next Git Hunk' })
+    -- 跳转到下一个 hunk
+vim.keymap.set('n', '[c', ':Gitsigns prev_hunk<CR>', { noremap = true, silent = true, desc = 'Previous Git Hunk' })
+    -- 跳转到上一个 hunk
+vim.keymap.set('n', '<leader>hs', ':Gitsigns stage_hunk<CR>', { noremap = true, silent = true, desc = 'Stage Current Hunk' })
+    -- 暂存当前 hunk
+vim.keymap.set('n', '<leader>hr', ':Gitsigns reset_hunk<CR>', { noremap = true, silent = true, desc = 'Reset Current Hunk' })
+    -- 重置当前 hunk
+vim.keymap.set('n', '<leader>hS', ':Gitsigns stage_buffer<CR>', { noremap = true, silent = true, desc = 'Stage Buffer' })
+    -- 暂存整个缓冲区
+vim.keymap.set('n', '<leader>hu', ':Gitsigns undo_stage_hunk<CR>', { noremap = true, silent = true, desc = 'Undo Stage Hunk' })
+    -- 撤销暂存当前 hunk
+vim.keymap.set('n', '<leader>hR', ':Gitsigns reset_buffer<CR>', { noremap = true, silent = true, desc = 'Reset Buffer' })
+    -- 重置整个缓冲区
+vim.keymap.set('n', '<leader>hp', ':Gitsigns preview_hunk<CR>', { noremap = true, silent = true, desc = 'Preview Hunk' })
+    -- 预览当前 hunk
+vim.keymap.set('n', '<leader>hb', ':Gitsigns blame_line<CR>', { noremap = true, silent = true, desc = 'Show Line Blame' })
+    -- 显示当前行的 blame 信息
+vim.keymap.set('n', '<leader>tb', ':Gitsigns toggle_current_line_blame<CR>', { noremap = true, silent = true, desc = 'Toggle Line Blame' })
+    -- 切换当前行的 blame 信息
+vim.keymap.set('n', '<leader>hd', ':Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = 'Show File Diff' })
+    -- 显示当前文件的 diff
+vim.keymap.set('n', '<leader>td', ':Gitsigns toggle_deleted<CR>', { noremap = true, silent = true, desc = 'Toggle Deleted Lines' })
+    -- 切换显示已删除的行
