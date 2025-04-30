@@ -43,10 +43,10 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "❌",
-			[vim.diagnostic.severity.WARN] = "⚠️",
-			[vim.diagnostic.severity.HINT] = "💡",
-			[vim.diagnostic.severity.INFO] = "ℹ️"
+			[vim.diagnostic.severity.ERROR] = "",  -- Nerd Font error icon
+			[vim.diagnostic.severity.WARN] = "",   -- Nerd Font warning icon
+			[vim.diagnostic.severity.HINT] = "",   -- Nerd Font hint icon
+			[vim.diagnostic.severity.INFO] = ""    -- Nerd Font info icon
 		}
 	},                      -- 自定义诊断符号
 	underline = true,       -- 显示下划线
