@@ -8,7 +8,7 @@ return {
 				-- suggestion = { enabled = false }, -- 禁用默认的 inline suggestions
 				-- panel = { enabled = false }, -- 禁用面板
 			})
-		end,
+		end
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -24,8 +24,8 @@ return {
 			},
 		},
 		config = function()
-			require("copilot_cmp").setup()            -- Copilot 补全源支持
-			require("config.cmp")                     -- 引用 cmp 的配置文件
-		end,
+			require("copilot_cmp").setup() -- Copilot 补全源支持
+			require("config.cmp") -- 引用 cmp 的配置文件
+		end
 	},
 }

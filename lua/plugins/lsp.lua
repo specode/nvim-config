@@ -4,7 +4,7 @@ return {
 		event = "BufReadPre",
 		config = function()
 			require("config.lsp")
-		end,
+		end
 	},
 	{
 		"williamboman/mason.nvim",
@@ -19,7 +19,7 @@ return {
 					}
 				}
 			})
-		end,
+		end
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -30,6 +30,6 @@ return {
 				ensure_installed = lang_config.lsp_servers,
 				automatic_installation = true,
 			})
-		end,
+		end
 	},
 }
