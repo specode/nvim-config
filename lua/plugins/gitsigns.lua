@@ -4,6 +4,6 @@ return {
 		version = "*",
 		config = function()
 			require("config.gitsigns").setup()
-		end,
+		end
 	}
 }

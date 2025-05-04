@@ -43,17 +43,17 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "",  -- Nerd Font error icon
-			[vim.diagnostic.severity.WARN] = "",   -- Nerd Font warning icon
-			[vim.diagnostic.severity.HINT] = "",   -- Nerd Font hint icon
-			[vim.diagnostic.severity.INFO] = ""    -- Nerd Font info icon
+			[vim.diagnostic.severity.ERROR] = "", -- Nerd Font error icon
+			[vim.diagnostic.severity.WARN] = "", -- Nerd Font warning icon
+			[vim.diagnostic.severity.HINT] = "", -- Nerd Font hint icon
+			[vim.diagnostic.severity.INFO] = "" -- Nerd Font info icon
 		}
-	},                      -- 自定义诊断符号
-	underline = true,       -- 显示下划线
+	}, -- 自定义诊断符号
+	underline = true, -- 显示下划线
 	update_in_insert = false, -- 不在插入模式更新诊断
-	severity_sort = true,   -- 按严重程度排序
+	severity_sort = true, -- 按严重程度排序
 	float = {
 		border = "rounded", -- 浮动窗口边框样式
-		header = "",        -- 去除标题
+		header = "", -- 去除标题
 	}
 })
