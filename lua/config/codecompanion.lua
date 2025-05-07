@@ -31,7 +31,7 @@ M.setup = function()
 				return require("codecompanion.adapters").extend("openai_compatible", {
 					env = {
 						url = 'https://ark.cn-beijing.volces.com/api/v3',
-						api_key = "cmd:op read op://private/ARK/credential --no-newline",
+						api_key = "cmd:op read op://Private/ARK_API_KEY/credential --no-newline",
 						chat_url = "/chat/completions",
 						model_url = "/models",
 					},
