@@ -7,7 +7,7 @@ return {
 		end
 	},
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		version = "*",
 		config = function()
 			require("mason").setup({
@@ -22,13 +22,13 @@ return {
 		end
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
 		config = function()
 			local lang_config = require("config.lang")
 			require("mason-lspconfig").setup({
+				automatic_enable = true,
 				ensure_installed = lang_config.lsp_servers,
-				automatic_installation = true,
 			})
 		end
 	},
