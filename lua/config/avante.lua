@@ -1,8 +1,14 @@
 -- detail: https://github.com/yetone/avante.nvim/wiki/Custom-providers
 return {
 	mode = "agentic",
-	provider = 'volcengine_deepseek_r1',
+	provider = 'aihubmix_gpto4mini',
 	providers = {
+		aihubmix_gpto4mini = {
+			__inherited_from = 'openai',
+			endpoint = 'https://aihubmix.com/v1',
+			api_key_name = 'AIHUBMIX_API_KEY',
+			model = 'o4-mini',
+		},
 		volcengine_deepseek_v3 = {
 			__inherited_from = 'openai',
 			endpoint = 'https://ark.cn-beijing.volces.com/api/v3',
