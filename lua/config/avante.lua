@@ -14,9 +14,6 @@ return {
 			endpoint = 'https://api.deepseek.com/v1',
 			api_key_name = 'DEEPSEEK_API_KEY',
 			model = 'deepseek-reasoner',
-			extra_request_body = {
-				max_tokens = 8192,
-			},
 		},
 	},
 }
