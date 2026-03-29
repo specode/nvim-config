@@ -41,30 +41,7 @@ vim.keymap.set('n', '<leader>nf', function()
 	end, 50)
 end, { desc = "nvim-tree: Find File", noremap = true, silent = true, nowait = true })
 
--- telescope 配置
-vim.keymap.set("n", "<C-p>", function()
-	require("telescope.builtin").find_files()
-end, { noremap = true, silent = true, desc = "Find Files" })
-
-vim.keymap.set("n", "<C-g>", function()
-	require("telescope.builtin").live_grep()
-end, { noremap = true, silent = true, desc = "Live Grep" })
-
-vim.keymap.set("n", "<leader>fb", function()
-	require("telescope.builtin").buffers()
-end, { noremap = true, silent = true, desc = "Find Buffers" })
-
-vim.keymap.set("n", "<leader>fh", function()
-	require("telescope.builtin").help_tags()
-end, { noremap = true, silent = true, desc = "Find Help" })
-
-vim.keymap.set("n", "<leader>fd", function()
-	require("telescope.builtin").diagnostics()
-end, { noremap = true, silent = true, desc = "Find Diagnostics" })
-
--- leap 配置
-vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
-vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
+-- telescope 和 leap 的快捷键已移至各自插件的 keys 配置中
 
 -- gitsigns 配置
 vim.keymap.set('n', ']c', ':Gitsigns next_hunk<CR>', { noremap = true, silent = true, desc = 'Next Git Hunk' })            -- 跳转到下一个 hunk
