@@ -6,6 +6,24 @@ This is my Neovim configuration, using Lazy for plugin management
 
 * Environment: MacOS + iTerm2
 
+## Plugin List
+
+| Plugin | Description |
+| --- | --- |
+| [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) | Color scheme |
+| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | File explorer |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configuration |
+| [mason.nvim](https://github.com/mason-org/mason.nvim) | LSP server manager |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Auto completion |
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
+| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Status line |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration |
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
+| [leap.nvim](https://codeberg.org/andyg/leap.nvim) | Quick motion |
+| [mini.pairs](https://github.com/echasnovski/mini.pairs) | Auto pairs |
+
 ## Initialization Process
 
 1. Install Nerd Font, recommended `JetBrainsMonoNerdFontMono-Regular`, after downloading and installation, switch terminal font
@@ -14,7 +32,6 @@ This is my Neovim configuration, using Lazy for plugin management
 4. Install `lsp-server` via `:Mason`
 5. Install ripgrep for global search: `brew install ripgrep`
 6. (Optional) Enable Copilot `:Copilot auth`
-7. (Optional) Enable Avante by modifying `provider` configuration in `lua/config/avante.lua`, and update API Key in environment variables: `export OPENAI_API_KEY=xxx`
 
 ## Keybindings Reference
 
@@ -24,6 +41,7 @@ This is my Neovim configuration, using Lazy for plugin management
 | `,` | Leader key |
 | `Y` | Yank from current position to end of line |
 | `gb` | Go back to previous position (`<C-o>`) |
+| `<leader>e` | Show diagnostic float window |
 
 ### Window & Tab Management
 | Keybinding | Function |
@@ -36,6 +54,12 @@ This is my Neovim configuration, using Lazy for plugin management
 | `<C-k>` | Switch to top window |
 | `<C-l>` | Switch to right window |
 
+### Quick Motion (Leap)
+| Keybinding | Function |
+| --- | --- |
+| `s` | Leap (quick jump in normal/visual/operator mode) |
+| `S` | Leap from other windows |
+
 ### File Explorer (nvim-tree)
 | Keybinding | Function |
 | --- | --- |
@@ -44,6 +68,8 @@ This is my Neovim configuration, using Lazy for plugin management
 | `<CR>` | Open file/directory |
 | `h` | Close directory |
 | `v` | Open file in vertical split |
+| `s` | Open file in horizontal split |
+| `t` | Open file in new tab |
 | `a` | Create file/directory |
 | `d` | Delete file/directory |
 | `r` | Rename file/directory |
@@ -60,6 +86,7 @@ This is my Neovim configuration, using Lazy for plugin management
 | `<C-g>` | Global text search |
 | `,fb` | Find buffer |
 | `,fh` | Find help tags |
+| `,fd` | Find diagnostics |
 
 ### Code Navigation (LSP)
 | Keybinding | Function |
