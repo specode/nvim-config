@@ -2,17 +2,34 @@
 
 这是我的 Neovim 配置，使用 Lazy 用于插件管理
 
-* 使用环境是 MacOS + iTerm2 
+* 使用环境是 MacOS + iTerm2
+
+## 插件列表
+
+| 插件 | 说明 |
+| --- | --- |
+| [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) | 主题配色 |
+| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | 文件浏览器 |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | 模糊查找 |
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP 配置 |
+| [mason.nvim](https://github.com/mason-org/mason.nvim) | LSP 服务器管理 |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | 自动补全 |
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
+| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | 状态栏 |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成 |
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
+| [leap.nvim](https://codeberg.org/andyg/leap.nvim) | 快速跳转 |
+| [mini.pairs](https://github.com/echasnovski/mini.pairs) | 自动括号配对 |
 
 ## 初始化流程
 
 1. 安装 Nerd 字体，推荐 `JetBrainsMonoNerdFontMono-Regular`，下载安装后，终端字体切换
-2. 下载项目，并建立软链接到 `/Users/{your user}/.config/nvim/` 
+2. 下载项目，并建立软链接到 `/Users/{your user}/.config/nvim/`
 3. 打开 nvim 配置目录下的 `lua/config/lang.lua` 配置开发语言
 4. 通过 `:Mason` 安装 `lsp-server`
 5. 安装 ripgrep 用于全局搜索：`brew install ripgrep`
 6. （可选）启用 Copilot `:Copilot auth`
-7. （可选）启用 Avante `lua/config/avante.lua` 修改其 `provider` 相关配置，并再环境变量中更新 API Key， `export OPENAI_API_KEY=xxx`
 
 ## 快捷键说明
 
@@ -22,6 +39,7 @@
 | `,` | Leader 键 |
 | `Y` | 从当前位置复制到行尾 |
 | `gb` | 跳回上一个位置 (`<C-o>`) |
+| `<leader>e` | 显示诊断浮窗 |
 
 ### 窗口与标签页
 | 快捷键 | 功能 |
@@ -34,6 +52,12 @@
 | `<C-k>` | 切换到上方窗口 |
 | `<C-l>` | 切换到右侧窗口 |
 
+### 快速跳转 (Leap)
+| 快捷键 | 功能 |
+| --- | --- |
+| `s` | Leap 跳转（普通/可视/操作模式） |
+| `S` | 从其他窗口 Leap 跳转 |
+
 ### 文件浏览 (nvim-tree)
 | 快捷键 | 功能 |
 | --- | --- |
@@ -42,6 +66,8 @@
 | `<CR>` | 打开文件/目录 |
 | `h` | 关闭目录 |
 | `v` | 垂直分割打开文件 |
+| `s` | 水平分割打开文件 |
+| `t` | 在新标签页中打开文件 |
 | `a` | 创建文件/目录 |
 | `d` | 删除文件/目录 |
 | `r` | 重命名文件/目录 |
@@ -58,6 +84,7 @@
 | `<C-g>` | 全局搜索文本 |
 | `,fb` | 查找缓冲区 |
 | `,fh` | 查找帮助标签 |
+| `,fd` | 查找诊断信息 |
 
 ### 代码导航 (LSP)
 | 快捷键 | 功能 |
@@ -103,4 +130,3 @@
 | `<CR>` | 确认补全项 |
 | `<Tab>` | 选择下一个补全项 |
 | `<S-Tab>` | 选择上一个补全项 |
-
