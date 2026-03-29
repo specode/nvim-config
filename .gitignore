@@ -1,1 +1,23 @@
+# Lazy.nvim
 lazy-lock.json
+
+# Plugin data
+plugin/
+
+# Neovim generated
+spell/
+
+# Undo/swap/backup files
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Misc
+*.log
+tags
