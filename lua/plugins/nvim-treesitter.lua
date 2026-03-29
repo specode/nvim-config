@@ -2,7 +2,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		version = "*",
-		run = ":TSUpdate",
+		build = ":TSUpdate",
 		config = function()
 			local configs = require("nvim-treesitter.configs")
 			local lang_config = require("config.lang")

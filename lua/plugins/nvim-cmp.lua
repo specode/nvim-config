@@ -1,7 +1,6 @@
 return {
 	{
 		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
@@ -20,7 +19,7 @@ return {
 			-- Copilot 补全源
 			{
 				"zbirenbaum/copilot-cmp",
-				after = { "copilot.lua" },
+				dependencies = { "zbirenbaum/copilot.lua" },
 			},
 		},
 		config = function()

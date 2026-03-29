@@ -2,7 +2,6 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- 快捷键配置
 local on_attach = function(_, bufnr)
-	print("LSP attached to buffer " .. bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 	local map = vim.keymap.set
 
