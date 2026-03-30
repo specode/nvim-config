@@ -1,23 +1,32 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		version = "*",
+		branch = "main",
 		build = ":TSUpdate",
 		config = function()
-			local configs = require("nvim-treesitter.configs")
 			local lang_config = require("config.lang")
 
-			configs.setup({
-				modules = {},
-				auto_install = true,
-				sync_install = false,
-				ignore_install = {},
-				ensure_installed = lang_config.treesitter_parsers,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false
-				},
-				indent = { enable = true },
+			require("nvim-treesitter").setup({
+				-- Configuration options for nvim-treesitter main branch
+			})
+
+			-- Handle ensure_installed
+			if lang_config.treesitter_parsers == "all" then
+				require("nvim-treesitter").install("all")
+			elseif type(lang_config.treesitter_parsers) == "table" then
+				require("nvim-treesitter").install(lang_config.treesitter_parsers)
+			end
+
+			-- Enable highlight and indent for all filetypes by default
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "*",
+				callback = function()
+					-- Start treesitter highlight
+					pcall(vim.treesitter.start)
+					-- Enable treesitter based folding
+					vim.wo[0][0].foldmethod = "expr"
+					vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+				end,
 			})
 		end
 	},

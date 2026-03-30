@@ -29,7 +29,8 @@
 3. 打开 nvim 配置目录下的 `lua/config/lang.lua` 配置开发语言
 4. 通过 `:Mason` 安装 `lsp-server`
 5. 安装 ripgrep 用于全局搜索：`brew install ripgrep`
-6. （可选）启用 Copilot `:Copilot auth`
+6. 安装 tree-sitter CLI 用于部分语言的语法树编译支持：`npm install -g tree-sitter-cli`（或者使用 Homebrew：`brew install tree-sitter-cli`）
+7. （可选）启用 Copilot `:Copilot auth`
 
 ## 快捷键说明
 
