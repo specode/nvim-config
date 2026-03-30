@@ -26,6 +26,10 @@ vim.api.nvim_create_autocmd("FileType", {
 -- 显示行号
 vim.opt.number = true
 
+-- 默认不折叠
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
 -- 剪切板共享
 vim.opt.clipboard = 'unnamedplus'
 
