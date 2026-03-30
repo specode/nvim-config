@@ -31,7 +31,8 @@ This is my Neovim configuration, using Lazy for plugin management
 3. Open `lua/config/lang.lua` in nvim config directory to configure development languages
 4. Install `lsp-server` via `:Mason`
 5. Install ripgrep for global search: `brew install ripgrep`
-6. (Optional) Enable Copilot `:Copilot auth`
+6. Install tree-sitter CLI for AST compilation support: `npm install -g tree-sitter-cli` (or via Homebrew: `brew install tree-sitter-cli`)
+7. (Optional) Enable Copilot `:Copilot auth`
 
 ## Keybindings Reference
 
