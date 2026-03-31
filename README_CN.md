@@ -21,6 +21,7 @@
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | 快速跳转 |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | 自动括号配对 |
+| [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Markdown Buffer 内渲染 |
 
 ## 初始化流程
 

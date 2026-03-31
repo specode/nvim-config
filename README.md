@@ -23,6 +23,7 @@ This is my Neovim configuration, using Lazy for plugin management
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | Quick motion |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | Auto pairs |
+| [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Markdown in-buffer rendering |
 
 ## Initialization Process
 
