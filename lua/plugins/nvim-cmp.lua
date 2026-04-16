@@ -1,30 +1,26 @@
 return {
 	{
-		"zbirenbaum/copilot.lua",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				-- suggestion = { enabled = false }, -- 禁用默认的 inline suggestions
-				-- panel = { enabled = false }, -- 禁用面板
-			})
-		end
-	},
-	{
-		"hrsh7th/nvim-cmp",
+		"saghen/blink.cmp",
+		version = "1.*",
 		event = "InsertEnter",
 		dependencies = {
-			"hrsh7th/cmp-nvim-lsp", -- LSP 补全源
-			"hrsh7th/cmp-buffer", -- 当前缓冲区补全
-			"hrsh7th/cmp-path", -- 文件路径补全
-			-- Copilot 补全源
-			{
-				"zbirenbaum/copilot-cmp",
-				dependencies = { "zbirenbaum/copilot.lua" },
-			},
+			"rafamadriz/friendly-snippets",
 		},
-		config = function()
-			require("copilot_cmp").setup() -- Copilot 补全源支持
-			require("config.cmp") -- 引用 cmp 的配置文件
-		end
+		---@module 'blink.cmp'
+		---@type blink.cmp.Config
+		opts = {
+			keymap = { preset = "default" },
+			appearance = {
+				nerd_font_variant = "mono",
+			},
+			completion = {
+				documentation = { auto_show = true },
+			},
+			sources = {
+				default = { "lsp", "path", "snippets", "buffer" },
+			},
+			fuzzy = { implementation = "prefer_rust_with_warning" },
+		},
+		opts_extend = { "sources.default" },
 	},
 }

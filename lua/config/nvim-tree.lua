@@ -29,7 +29,9 @@ M.setup = function()
 			vim.keymap.set("n", "R", api.tree.reload, opts("Refresh"))
 			vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 		end,
-		-- 其他配置
+		git = {
+			ignore = false,
+		},
 		view = {
 			width = 30,
 		},

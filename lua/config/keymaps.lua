@@ -41,6 +41,12 @@ vim.keymap.set('n', '<leader>nf', function()
 	end, 50)
 end, { desc = "nvim-tree: Find File", noremap = true, silent = true, nowait = true })
 
+-- 注释快捷键（Neovim 0.10+ 内置 gc/gcc）
+vim.keymap.set('n', '//', 'gcc', { desc = 'Toggle line comment', remap = true })
+vim.keymap.set('v', '//', 'gc', { desc = 'Toggle comment', remap = true })
+vim.keymap.set('n', '/b', 'gbc', { desc = 'Toggle block comment', remap = true })
+vim.keymap.set('v', '/b', 'gb', { desc = 'Toggle block comment', remap = true })
+
 -- telescope 和 leap 的快捷键已移至各自插件的 keys 配置中
 
 -- gitsigns 配置
