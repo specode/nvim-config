@@ -3,7 +3,7 @@ return {
 		"nvim-tree/nvim-tree.lua",
 		event = "BufReadPre",
 		version = "*",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { "echasnovski/mini.icons" },
 		config = function()
 			require("config.nvim-tree").setup()
 		end,
