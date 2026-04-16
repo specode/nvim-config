@@ -15,14 +15,14 @@ This is my Neovim configuration, using Lazy for plugin management
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP configuration |
 | [mason.nvim](https://github.com/mason-org/mason.nvim) | LSP server manager |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Auto completion |
-| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot |
+| [blink.cmp](https://github.com/Saghen/blink.cmp) | Auto completion |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Status line |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration |
-| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Code commenting |
+| Neovim built-in `gc`/`gcc` | Code commenting |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | Quick motion |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | Auto pairs |
+| [mini.icons](https://github.com/echasnovski/mini.icons) | File icons |
 | [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Markdown in-buffer rendering |
 
 ## Initialization Process
@@ -33,7 +33,6 @@ This is my Neovim configuration, using Lazy for plugin management
 4. Install `lsp-server` via `:Mason`
 5. Install ripgrep for global search: `brew install ripgrep`
 6. Install tree-sitter CLI for AST compilation support: `npm install -g tree-sitter-cli` (or via Homebrew: `brew install tree-sitter-cli`)
-7. (Optional) Enable Copilot `:Copilot auth`
 
 ## Keybindings Reference
 
@@ -105,7 +104,7 @@ This is my Neovim configuration, using Lazy for plugin management
 | `]d` | Go to next diagnostic |
 | `,f` | Format code |
 
-### Code Commenting (Comment)
+### Code Commenting (Built-in)
 | Keybinding | Function |
 | --- | --- |
 | `//` | Toggle line comment |
@@ -127,10 +126,11 @@ This is my Neovim configuration, using Lazy for plugin management
 | `,hd` | Show diff for current file |
 | `,td` | Toggle deleted lines |
 
-### Code Completion
+### Code Completion (blink.cmp)
 | Keybinding | Function |
 | --- | --- |
 | `<C-Space>` | Manual trigger completion |
-| `<CR>` | Confirm completion item |
-| `<Tab>` | Select next completion item |
-| `<S-Tab>` | Select previous completion item |
+| `<C-y>` | Accept completion item |
+| `<C-n>` | Select next completion item |
+| `<C-p>` | Select previous completion item |
+| `<C-e>` | Cancel completion |

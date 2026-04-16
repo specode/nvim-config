@@ -13,14 +13,14 @@
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | 模糊查找 |
 | [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP 配置 |
 | [mason.nvim](https://github.com/mason-org/mason.nvim) | LSP 服务器管理 |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | 自动补全 |
-| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | GitHub Copilot |
+| [blink.cmp](https://github.com/Saghen/blink.cmp) | 自动补全 |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | 状态栏 |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成 |
-| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | 代码注释 |
+| Neovim 内置 `gc`/`gcc` | 代码注释 |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | 快速跳转 |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | 自动括号配对 |
+| [mini.icons](https://github.com/echasnovski/mini.icons) | 文件图标 |
 | [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Markdown Buffer 内渲染 |
 
 ## 初始化流程
@@ -31,7 +31,6 @@
 4. 通过 `:Mason` 安装 `lsp-server`
 5. 安装 ripgrep 用于全局搜索：`brew install ripgrep`
 6. 安装 tree-sitter CLI 用于部分语言的语法树编译支持：`npm install -g tree-sitter-cli`（或者使用 Homebrew：`brew install tree-sitter-cli`）
-7. （可选）启用 Copilot `:Copilot auth`
 
 ## 快捷键说明
 
@@ -103,7 +102,7 @@
 | `]d` | 跳转到下一个诊断 |
 | `,f` | 格式化代码 |
 
-### 代码注释 (Comment)
+### 代码注释（内置）
 | 快捷键 | 功能 |
 | --- | --- |
 | `//` | 切换行注释 |
@@ -125,10 +124,11 @@
 | `,hd` | 显示当前文件的 diff |
 | `,td` | 切换显示已删除的行 |
 
-### 代码补全
+### 代码补全 (blink.cmp)
 | 快捷键 | 功能 |
 | --- | --- |
 | `<C-Space>` | 手动触发补全 |
-| `<CR>` | 确认补全项 |
-| `<Tab>` | 选择下一个补全项 |
-| `<S-Tab>` | 选择上一个补全项 |
+| `<C-y>` | 确认补全项 |
+| `<C-n>` | 选择下一个补全项 |
+| `<C-p>` | 选择上一个补全项 |
+| `<C-e>` | 取消补全 |
