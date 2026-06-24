@@ -27,7 +27,7 @@ This is my Neovim configuration, using Lazy for plugin management
 
 ## Initialization Process
 
-1. Make sure your terminal uses a Nerd Font (required for icons). Recommended: set up your terminal first with my dotfiles — https://github.com/specode/dotfiles
+1. Make sure your terminal uses JetBrains Mono Nerd Font Mono (required for icons; covers both ASCII and CJK). Recommended: set up your terminal first with my dotfiles — https://github.com/specode/dotfiles
 2. Clone the project and create a symlink to `/Users/{your user}/.config/nvim/`
 3. Open `lua/config/lang.lua` in nvim config directory to configure development languages
 4. Install `lsp-server` via `:Mason`

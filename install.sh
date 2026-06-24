@@ -55,9 +55,9 @@ fi
 
 # ── Nerd Font reminder ─────────────────────────────────────────────────────────
 
-warn "A Nerd Font is required for icons."
+warn "JetBrains Mono Nerd Font Mono is required for icons (covers both ASCII and CJK)."
 warn "Recommended: set up your terminal first with my dotfiles — https://github.com/specode/dotfiles"
-warn "Or download any Nerd Font: https://www.nerdfonts.com/font-downloads, then set it in your terminal."
+warn "Or install it: brew install --cask font-jetbrains-mono-nerd-font, then set it in your terminal."
 
 # ── Symlink config ─────────────────────────────────────────────────────────────
 
@@ -90,7 +90,7 @@ echo ""
 info "Installation complete!"
 echo ""
 echo "  Next steps:"
-echo "  1. Make sure your terminal uses a Nerd Font (recommended: set up via https://github.com/specode/dotfiles)"
+echo "  1. Make sure your terminal uses JetBrains Mono Nerd Font Mono (recommended: set up via https://github.com/specode/dotfiles)"
 echo "  2. Edit $REPO_DIR/lua/config/lang.lua to adjust LSP servers / parsers"
 echo "  3. Open nvim and run :Mason to install LSP servers"
 echo ""
