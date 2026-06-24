@@ -25,7 +25,7 @@
 
 ## 初始化流程
 
-1. 安装 Nerd 字体，推荐 `JetBrainsMonoNerdFontMono-Regular`，下载安装后，终端字体切换
+1. 确保终端使用 Nerd 字体（用于图标显示）。推荐先用我的 dotfiles 完成终端配置初始化：https://github.com/specode/dotfiles
 2. 下载项目，并建立软链接到 `/Users/{your user}/.config/nvim/`
 3. 打开 nvim 配置目录下的 `lua/config/lang.lua` 配置开发语言
 4. 通过 `:Mason` 安装 `lsp-server`

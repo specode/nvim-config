@@ -55,9 +55,9 @@ fi
 
 # ── Nerd Font reminder ─────────────────────────────────────────────────────────
 
-warn "Nerd Font required for icons. Recommended: JetBrainsMono Nerd Font"
-warn "Download: https://www.nerdfonts.com/font-downloads"
-warn "After installing, set the font in your terminal emulator."
+warn "A Nerd Font is required for icons."
+warn "Recommended: set up your terminal first with my dotfiles — https://github.com/specode/dotfiles"
+warn "Or download any Nerd Font: https://www.nerdfonts.com/font-downloads, then set it in your terminal."
 
 # ── Symlink config ─────────────────────────────────────────────────────────────
 
@@ -90,7 +90,7 @@ echo ""
 info "Installation complete!"
 echo ""
 echo "  Next steps:"
-echo "  1. Set your terminal font to a Nerd Font (e.g. JetBrainsMono Nerd Font)"
+echo "  1. Make sure your terminal uses a Nerd Font (recommended: set up via https://github.com/specode/dotfiles)"
 echo "  2. Edit $REPO_DIR/lua/config/lang.lua to adjust LSP servers / parsers"
 echo "  3. Open nvim and run :Mason to install LSP servers"
 echo ""
