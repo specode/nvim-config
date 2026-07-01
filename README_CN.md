@@ -17,6 +17,7 @@
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法高亮 |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | 状态栏 |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git 集成 |
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim) | 多文件 Git diff 查看 |
 | Neovim 内置 `gc`/`gcc` | 代码注释 |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | 快速跳转 |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | 自动括号配对 |
@@ -123,6 +124,15 @@
 | `,tb` | 切换当前行的 blame 信息 |
 | `,hd` | 显示当前文件的 diff |
 | `,td` | 切换显示已删除的行 |
+
+### Git Diff 查看 (Diffview)
+| 快捷键 | 功能 |
+| --- | --- |
+| `,gd` | 打开工作区 diff view |
+| `,gD` | 打开已暂存 diff view |
+| `,gh` | 查看当前文件历史 |
+| `,gH` | 查看仓库历史 |
+| `,gq` | 关闭 diff view |
 
 ### 代码补全 (blink.cmp)
 | 快捷键 | 功能 |

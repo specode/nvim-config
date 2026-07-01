@@ -19,6 +19,7 @@ This is my Neovim configuration, using Lazy for plugin management
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Status line |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git integration |
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Multi-file Git diff viewer |
 | Neovim built-in `gc`/`gcc` | Code commenting |
 | [leap.nvim](https://codeberg.org/andyg/leap.nvim) | Quick motion |
 | [mini.pairs](https://github.com/echasnovski/mini.pairs) | Auto pairs |
@@ -125,6 +126,15 @@ This is my Neovim configuration, using Lazy for plugin management
 | `,tb` | Toggle blame info for current line |
 | `,hd` | Show diff for current file |
 | `,td` | Toggle deleted lines |
+
+### Git Diff View (Diffview)
+| Keybinding | Function |
+| --- | --- |
+| `,gd` | Open working tree diff view |
+| `,gD` | Open staged diff view |
+| `,gh` | Show current file history |
+| `,gH` | Show repository history |
+| `,gq` | Close diff view |
 
 ### Code Completion (blink.cmp)
 | Keybinding | Function |
